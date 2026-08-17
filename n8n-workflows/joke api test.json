@@ -1,0 +1,57 @@
+{
+  "name": "My workflow",
+  "nodes": [
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        0,
+        0
+      ],
+      "id": "e7a2e9bb-5810-4838-b917-1c7116f9d29e",
+      "name": "When clicking ‘Execute workflow’"
+    },
+    {
+      "parameters": {
+        "url": "https://official-joke-api.appspot.com/random_joke",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.5,
+      "position": [
+        224,
+        0
+      ],
+      "id": "8799de04-50e0-41ed-8fad-21c4fd2715a0",
+      "name": "HTTP Request"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "When clicking ‘Execute workflow’": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate",
+    "availableInMCP": false
+  },
+  "versionId": "ef22d45c-d1fc-4cbd-be49-47a3004d81a2",
+  "meta": {
+    "instanceId": "c9a71f8c6701529834114bddb400639919cf77e5ac5aec759b74897cdb7df85e"
+  },
+  "nodeGroups": [],
+  "id": "i57uwXZ647Krt3IV",
+  "tags": []
+}
